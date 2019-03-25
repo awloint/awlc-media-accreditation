@@ -14,12 +14,11 @@ $emailBodyVolunteer = "<table style='background-color: #d5d5d5;' border='0' widt
 <td style='padding-right: 40px; text-align: right;' colspan='2'></td>
 </tr>
 <tr>
-<td style='color: #000; font-size: 12pt; font-family: Helvetica; font-weight: normal; line-height: 15pt; padding: 40px 40px 80px 40px;' colspan='2' valign='top'>Dear {$firstName} {$lastName},
-<p>Thank you for choosing to volunteer for the #AWLCRwanda2019, and sharing your good heart with us. You may not know this but you are real MVP.</p>
-<p>The data you submitted has been submitted into our database.</p>
-<p>Kindly click <a href='https://join.slack.com/t/awlo/shared_invite/enQtNTUzOTczMjc1MzMyLWM0OTVhM2NmZmI0Y2I1MDEzZWMzNDczNzUwYmRmMmQ1MWIwNjE0MDE4MmFjMjlhN2U3MTQ5MDJkNWMxZTliOTk'>HERE</a> to join our slack channel where you can meet with other volunteers and get instructions/information about the next steps on your volunteer journey.</p>
-<p>We look forward to working together with you.</p>
-<p>Welcome to the AWLO Team,</p>
+<td style='color: #000; font-size: 12pt; font-family: Helvetica; font-weight: normal; line-height: 15pt; padding: 40px 40px 80px 40px;' colspan='2' valign='top'>Dear {$mediaHouseName} ,
+<p>You have sucessfully completed the media accreditation process.</p>
+<p>Media representatives are expected to arrive at the conference venue with proof of identification to be presented at the registration desk.</p>
+<p>Identification validates entry.</p>
+<p>Thank you for you cooperation</p>
 <p><img src='https://stbensonimoh.com/email/sign_rosette_blue_ink.png' height='50px' /></p>
 </td>
 </tr>
@@ -27,7 +26,7 @@ $emailBodyVolunteer = "<table style='background-color: #d5d5d5;' border='0' widt
 <td style='border-top: 5px solid #940000; height: 10px; font-size: 7pt;' colspan='2' valign='top'><span>&nbsp;</span></td>
 </tr>
 <tr style='text-align: center;'>
-<td id='s1' style='padding-left: 20px;' valign='top'><span style='text-align: center; color: #333; font-size: 12pt;'><strong>Volunteer</strong></span><span style='color: #cccccc; font-size: x-large;'>&nbsp;|&nbsp;</span><span style='text-align: left; color: #333; font-size: 11pt; font-weight: normal;'>Volunteer Desk</span></td>
+<td id='s1' style='padding-left: 20px;' valign='top'><span style='text-align: center; color: #333; font-size: 12pt;'><strong>Volunteer</strong></span><span style='color: #cccccc; font-size: x-large;'>&nbsp;|&nbsp;</span><span style='text-align: left; color: #333; font-size: 11pt; font-weight: normal;'>Media Desk</span></td>
 </tr>
 <tr style='text-align: center; padding-left: 40px; padding-right: 40px; padding-bottom: 0;'>
 <td colspan='2' valign='top'><span style='color: #333; font-size: 8pt; font-weight: normal; line-height: 17pt; padding-left: 40px; padding-right: 40px;'>African Women in Leadership Organisation<br /><strong>International Headquarters:</strong> 6, Alhaji Bankole Crescent, Ikeja, Lagos - Nigeria<br />tel: +2347066819910 &nbsp;|&nbsp; mobile: +2348066285116 &nbsp;|&nbsp; +2348087719510<br /><strong>USA:</strong> 60 4800 Duval Point Way SW, Snellville, GA 30039, USA.<br />tel: +1 404-518-8194 &nbsp;| <span>+1 505-547-0528</span>&nbsp;&nbsp;<br /><strong>South Africa:</strong>&nbsp;Newlands Shopping Centre CNR. Dely Road/Lois Road, <br />1st Floor, Suite 104, Newlands, Pretoria, South Africa<br />tel: +27-845-105871<br /><strong>email:&nbsp;</strong>volunteer@awlo.org &nbsp;|&nbsp; <strong>www.awlo.org</strong></span>
@@ -66,20 +65,15 @@ $emailBodyOrganisation = "<table style='background-color: #d5d5d5;' border='0' w
 <tr>
 <td style='color: #000; font-size: 12pt; font-family: Helvetica; font-weight: normal; line-height: 15pt; padding: 40px 40px 80px 40px;' colspan='2' valign='top'>
 <p>Dear Admin,</p>
-<p>Someone has Volunteered for the AWLCRwanda2019 as a Social Media Volunteer. Below are the details:</p>
+<p>A Media house has been accredited. Below are the details:</p>
 <p>
-<strong>First Name: </strong> {$firstName} <br>
-<strong>Middle Name: </strong> {$middleName} <br>
-<strong>Last Name: </strong> {$lastName} <br>
-<strong>Email: </strong> {$email} <br>
-<strong>Phone Number: </strong> {$phone} <br>
-<strong>Current Location: </strong> {$location} <br>
-<strong>LinkedIn Handle: </strong> {$linkedinHandle} <br>
-<strong>Twitter Handle: </strong> {$twitterHandle} <br>
-<strong>Instagram Handle: </strong> {$instagramHandle} <br>
-<strong>Facebook Handle: </strong> {$facebookHandle} <br>
-<strong>Which of these social media handles are you most conversant with? : </strong> {$familiarHandles} <br>
-<strong>Why do you want to volunteer?: </strong> {$reasonForVolunteering} <br>
+<strong>Name of Media House: </strong> {$mediaHouseName} <br>
+<strong>Email Address for the Media House: </strong> {$mediaHouseEmail} <br>
+<strong>Phone Number For Media House: </strong> {$mediaHousePhone} <br>
+<strong>Name Of Contact: </strong> {$contactPersonName} <br>
+<strong>Contact Email Address: </strong> {$contactPersonnEmail} <br>
+<strong>Contact Phone Number: </strong> {$contactPersonPhone} <br>
+<strong>Name Of representative: </strong> {$representative} <br>
 </p>
 <p>Warm Regards,</p>
 <p><img src='https://stbensonimoh.com/email/sign_rosette_blue_ink.png' height='50px' /></p>
@@ -89,7 +83,7 @@ $emailBodyOrganisation = "<table style='background-color: #d5d5d5;' border='0' w
 <td style='border-top: 5px solid #940000; height: 10px; font-size: 7pt;' colspan='2' valign='top'><span>&nbsp;</span></td>
 </tr>
 <tr style='text-align: center;'>
-<td id='s1' style='padding-left: 20px;' valign='top'><span style='text-align: center; color: #333; font-size: 12pt;'><strong>Volunteer</strong></span><span style='color: #cccccc; font-size: x-large;'>&nbsp;|&nbsp;</span><span style='text-align: left; color: #333; font-size: 11pt; font-weight: normal;'>Volunteer Desk</span></td>
+<td id='s1' style='padding-left: 20px;' valign='top'><span style='text-align: center; color: #333; font-size: 12pt;'><strong>Volunteer</strong></span><span style='color: #cccccc; font-size: x-large;'>&nbsp;|&nbsp;</span><span style='text-align: left; color: #333; font-size: 11pt; font-weight: normal;'>Media Desk</span></td>
 </tr>
 <tr style='text-align: center; padding-left: 40px; padding-right: 40px; padding-bottom: 0;'>
 <td colspan='2' valign='top'><span style='color: #333; font-size: 8pt; font-weight: normal; line-height: 17pt; padding-left: 40px; padding-right: 40px;'>African Women in Leadership Organisation<br /><strong>International Headquarters:</strong> 6, Alhaji Bankole Crescent, Ikeja, Lagos - Nigeria<br />tel: +2347066819910 &nbsp;|&nbsp; mobile: +2348066285116 &nbsp;|&nbsp; +2348087719510<br /><strong>USA:</strong> 60 4800 Duval Point Way SW, Snellville, GA 30039, USA.<br />tel: +1 404-518-8194 &nbsp;| <span>+1 505-547-0528</span>&nbsp;&nbsp;<br /><strong>South Africa:</strong>&nbsp;Newlands Shopping Centre CNR. Dely Road/Lois Road, <br />1st Floor, Suite 104, Newlands, Pretoria, South Africa<br />tel: +27-845-105871<br /><strong>email:&nbsp;</strong>volunteer@awlo.org &nbsp;|&nbsp; <strong>www.awlo.org</strong></span>

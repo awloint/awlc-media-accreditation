@@ -6,32 +6,32 @@ document.addEventListener('DOMContentLoaded', e => {
     yearContent.innerHTML = year
 
     // Change the typed value of the first letter to uppercase for input fields and lowercase for email fields
-    document.querySelector('#mediaName').onchange = e => {
-        let val = document.querySelector('#mediaName').value
+    document.querySelector('#mediaHouseName').onchange = e => {
+        let val = document.querySelector('#mediaHouseName').value
         RegExp = /\b[a-z]/g
 
         val = val.charAt(0).toUpperCase() + val.substr(1)
     }
 
-    document.querySelector('#email').onchange = e => {
-        let val = document.querySelector('#email').value
-        RegExp = /\b[a-z]/g
-
-        val = val.charAt(0).toUpperCase() + val.substr(1)
-    }
-
-    document.querySelector('#contactName').onchange = e => {
-        let val = document.querySelector('#contactName').value
+    document.querySelector('#mediaHouseEmail').onchange = e => {
+        let val = document.querySelector('#mediaHouseEmail').value
         RegExp = /\b[a-z]/g
 
         val = val.toLowerCase()
     }
 
-    document.querySelector('#contactEmail').onchange = e => {
-        let val = document.querySelector('#contactEmail').value
+    document.querySelector('#contactPersonName').onchange = e => {
+        let val = document.querySelector('#contactPersonName').value
         RegExp = /\b[a-z]/g
 
         val = val.charAt(0).toUpperCase() + val.substr(1)
+    }
+
+    document.querySelector('#contactPersonEmail').onchange = e => {
+        let val = document.querySelector('#contactPersonEmail').value
+        RegExp = /\b[a-z]/g
+
+        val = val.toLowerCase()
     }
 
 

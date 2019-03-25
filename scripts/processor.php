@@ -19,45 +19,37 @@ require './DB.php';
 require './Notify.php';
 require './Newsletter.php';
 
-$firstName = $_POST['firstName'];
-$middleName = $_POST['middleName'];
-$lastName = $_POST['lastName'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$location = $_POST['location'];
-$linkedinHandle = $_POST['linkedinHandle'];
-$twitterHandle = $_POST['twitterHandle'];
-$instagramHandle = $_POST['instagramHandle'];
-$facebookHandle = $_POST['facebookHandle'];
-$familiarHandles = $_POST['familiarHandles'];
-$reasonForVolunteering = $_POST['reasonForVolunteering'];
+$mediaHouseName= $_POST['mediaHouseName'];
+$mediaHouseEmail = $_POST['mediaHouseEmail'];
+$mediaHousePhone = $_POST['mediaHousePhone'];
+$contactPersonName = $_POST['contactPersonName'];
+$contactPersonEmail =$_POST['contactPersonEmail'];
+$contactPersonPhone =$_POST['contactPErsonPhone'];
+$representative = $_POST['representative'];
+
 
 $name = $firstName . " " . $lastName;
 require './emails.php';
 $details = array(
-    "firstName" => $_POST['firstName'],
-    "middleName" => $_POST['middleName'],
-    "lastName" => $_POST['lastName'],
-    "email" => $_POST['email'],
-    "phone" => $_POST['phone'],
-    "location" => $_POST['location'],
-    "linkedinHandle" => $_POST['linkedinHandle'],
-    "twitterHandle" => $_POST['twitterHandle'],
-    "instagramHandle" => $_POST['instagramHandle'],
-    "facebookHandle" => $_POST['facebookHandle'],
-    "familiarHandles" => $_POST['familiarHandles'],
-    "reasonForVolunteering" => $_POST['reasonForVolunteering'],
+    "mediaHouseName" => $_POST['mediaHouseName'],
+    "mediaHouseEmail" =>$_POST['mediaHouseEmail'],
+    "mediaHousePhone" =>$_POST['mediaHousePhone'],
+    "contactPersonName" =>$_POST['contactPersonName'],
+    "contactPersonEmail" =>$_POST['contactPersonEmmail'],
+    "contactPersonPhone" =>$_POST['contactPersonPhone'],
+    "representative" => $_POST['representative'],
 );
 $emails = array(
     array(
             "email"         =>  $email,
             "variables"     =>  array(
-            "phone"         =>  $phone,
-            "name"          =>  $firstName,
-            "middleName"    =>  $middleName,
-            "lastName"      =>  $lastName,
-            "familiarHandles"        =>  $familiarHandles,
-            "reasonForVolunteering" => $reasonForVolunteering,
+            "mediaHouseName"         =>  $mediaHouseName,
+            "mediaHouseEmail"          =>  $mediaHouseEmail,
+            "mediaHousePhone"    =>  $mediaHousePhone,
+            "contactPersonName"      => $contactPersonName,
+            "contactPersonEmail"        =>  $contactPersonEmail,
+            "contactPersonPhone"    => $contactPersonPhone,
+            "representative" => $representative,
             )
     )
 );
@@ -67,15 +59,15 @@ $notify = new Notify($smstoken, $emailHost, $emailUsername, $emailPassword, $SMT
 $newsletter = new Newsletter($apiUserId, $apiSecret);
 
 // Check if the person has signed up to volunteer before
-if($db->userExists($email, "awlcrwanda_volunteers")) {
+if($db->userExists($email, "awlc2019_accreditation")) {
     echo json_encode("user_exists");
 }
 // Put the User into the Database
-if ($db->insertUser("awlcrwanda_volunteers", $details)) {
-    $notify->viaEmail("volunteer@awlo.org", "Volunter at African Women in Leadership Organisation", $email, $name, $emailBodyVolunteer, "Thanks for Signing Up to Be Our Media Volunteer");
-    $notify->viaEmail("volunteer@awlo.org", "Volunteer at African Women in Leadership Organisation", "volunteer@awlo.org", "Admin", $emailBodyOrganisation, "New Social Media Volunteer SignUp");
-    $notify->viaSMS("AWLOInt", "Dear {$firstName} {$lastName}, Thank you for volunteering and sharing your good heart with us. Kindly check your email for the next steps. Cheers!", $phone);
-    $notify->viaSMS("AWLOInt", "A Social Media Volunteer just signedup for the AWLCRwanda2019. Kindly check your email for the details.", "08037594969,08022473972");
+if ($db->insertUser("awlc2019_accreditation", $details)) {
+    $notify->viaEmail("info@awlo.org", "Afican Women In Leadership Organisation", $mediaHouseEmail, $mediaHouseName, "You have successfully completed the media accreditation process.Media representatives are expeted to arrive at the conference venue with proof of identification to be presented at he registration desk. Identification validates entry.Thank you for your cooperation");
+    $notify->viaEmail("info@awlo.org", "A media house has been accredited", "info@awlo.org", "Admin", $emailBodyOrganisation, "New Media Accreditation.");
+    $notify->viaSMS("AWLOInt", "Dear {$mediaHouseName}, Your media accreditation was successful, Kindly check youur email for more details.", $mediaHousePhone);
+    $notify->viaSMS("AWLOInt", "A Media House has just been accredited for the AWLCRwanda2019. Kindly check your email for the details.", "08037594969,08022473972");
     $newsletter->insertIntoList("2309698", $emails);
     echo json_encode("success");
 }
