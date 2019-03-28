@@ -71,7 +71,7 @@ $emailBodyOrganisation = "<table style='background-color: #d5d5d5;' border='0' w
 <strong>Email Address for the Media House: </strong> {$mediaHouseEmail} <br>
 <strong>Phone Number For Media House: </strong> {$mediaHousePhone} <br>
 <strong>Name Of Contact: </strong> {$contactPersonName} <br>
-<strong>Contact Email Address: </strong> {$contactPersonnEmail} <br>
+<strong>Contact Email Address: </strong> {$contactPersonEmail} <br>
 <strong>Contact Phone Number: </strong> {$contactPersonPhone} <br>
 <strong>Name Of representative: </strong> {$representative} <br>
 </p>

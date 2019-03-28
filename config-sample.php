@@ -12,7 +12,7 @@
  */
 // Database Configuration
 $host='';
-$db = '';
+$db ='';
 $username = '';
 $password = '';
 // SMS Configuration

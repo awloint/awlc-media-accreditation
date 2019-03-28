@@ -24,24 +24,24 @@ $mediaHouseEmail = $_POST['mediaHouseEmail'];
 $mediaHousePhone = $_POST['mediaHousePhone'];
 $contactPersonName = $_POST['contactPersonName'];
 $contactPersonEmail =$_POST['contactPersonEmail'];
-$contactPersonPhone =$_POST['contactPErsonPhone'];
+$contactPersonPhone =$_POST['contactPersonPhone'];
 $representative = $_POST['representative'];
 
 
-$name = $firstName . " " . $lastName;
+$name = $mediaHouseName . " " ;
 require './emails.php';
 $details = array(
     "mediaHouseName" => $_POST['mediaHouseName'],
     "mediaHouseEmail" =>$_POST['mediaHouseEmail'],
     "mediaHousePhone" =>$_POST['mediaHousePhone'],
     "contactPersonName" =>$_POST['contactPersonName'],
-    "contactPersonEmail" =>$_POST['contactPersonEmmail'],
+    "contactPersonEmail" =>$_POST['contactPersonEmail'],
     "contactPersonPhone" =>$_POST['contactPersonPhone'],
     "representative" => $_POST['representative'],
 );
 $emails = array(
     array(
-            "email"         =>  $email,
+            "email"         =>  $mediaHouseEmail,
             "variables"     =>  array(
             "mediaHouseName"         =>  $mediaHouseName,
             "mediaHouseEmail"          =>  $mediaHouseEmail,
