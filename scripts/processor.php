@@ -25,10 +25,8 @@ $mediaHousePhone = $_POST['mediaHousePhone'];
 $contactPersonName = $_POST['contactPersonName'];
 $contactPersonEmail =$_POST['contactPersonEmail'];
 $contactPersonPhone =$_POST['contactPersonPhone'];
-$representative = $_POST['representative'];
+$representatives = $_POST['representatives'];
 
-
-$name = $mediaHouseName . " " ;
 require './emails.php';
 $details = array(
     "mediaHouseName" => $_POST['mediaHouseName'],
@@ -41,15 +39,14 @@ $details = array(
 );
 $emails = array(
     array(
-            "email"         =>  $mediaHouseEmail,
-            "variables"     =>  array(
-            "mediaHouseName"         =>  $mediaHouseName,
-            "mediaHouseEmail"          =>  $mediaHouseEmail,
-            "mediaHousePhone"    =>  $mediaHousePhone,
-            "contactPersonName"      => $contactPersonName,
-            "contactPersonEmail"        =>  $contactPersonEmail,
-            "contactPersonPhone"    => $contactPersonPhone,
-            "representative" => $representative,
+            "email"                 =>  $mediaHouseEmail,
+            "variables"             =>  array(
+            "mediaHouseName"        =>  $mediaHouseName,
+            "mediaHousePhone"       =>  $mediaHousePhone,
+            "contactPersonName"     =>  $contactPersonName,
+            "contactPersonEmail"    =>  $contactPersonEmail,
+            "contactPersonPhone"    =>  $contactPersonPhone,
+            "representatives"       =>  $representatives,
             )
     )
 );
