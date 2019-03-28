@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Are you interested in volunteering for the AWLC? Then this is for you.">
+    <meta name="description" content="Media Accreditation form for the AWLCRwanda2019.">
     <meta name="keywords"
-        content="Volunteers in Africa, Volunteers, AWLC, AWLO, Conference, Women in Africa Conference, African Women in Leadership Conference">
+        content="Media Accreditation, Media, AWLC, AWLO, Conference, Women in Africa Conference, African Women in Leadership Conference">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MEDIA ACCREDITATION FORM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://awlo.org/womendecide/images/AWLO%20LOGO%20small.png" />
+    <meta property="og:image:secure_url" content="https://awlo.org/womendecide/images/AWLO%20LOGO%20small.png" />
     <!-- Load Bootstrap 4-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -34,7 +36,7 @@
                 <p class="text-center animated pulse infinite">
                     <img src="https://awlo.org/womendecide/images/AWLO%20LOGO%20small.png" alt="AWLO Logo" width="100px">
                 </p>
-                <h1 class="text-center boogaloo" style="font-size:300%;line-height: 50%;">AWLC<br /><span class="text-center roboto"
+                <h1 class="text-center boogaloo" style="font-size:300%;line-height: 50%;">AWLCRwanda2019<br /><span class="text-center roboto"
                         style="font-size: 50%;"> MEDIA ACCREDITATION</span></h1>
                 <p class="text-center slabo bold" style="font-size:200%;">
                     FORM
@@ -47,7 +49,7 @@
             <form action="#" method="POST" id="form" class="needs-validation bottom-margin" novalidate>
                 <div class="row">
                     <div class="col-md form-group">
-                        <input type="text" class="form-control" id="mediaHouseName" name="mediaHouseName" placeholder=" Name Of Media House"
+                        <input type="text" class="form-control" id="mediaHouseName" name="mediaHouseName" placeholder="Name Of Media House"
                             required>
                         <div class="invalid-feedback">
                             Please provide a Name.
@@ -56,9 +58,12 @@
                             Looks good!
                         </div>
                     </div>
-                         <div class="col-md form-group">
-                        <input type="email" class="form-control" id="mediaHouseEmail" name="mediaHouseEmail" placeholder=" Email Address For The Media House"
-                            required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md form-group">
+                        <input type="email" class="form-control" id="mediaHouseEmail" name="mediaHouseEmail"
+                            placeholder=" Email Address For The Media House" required>
                         <div class="invalid-feedback">
                             Please provide a valid email address.
                         </div>
@@ -68,9 +73,6 @@
                         <small class="form-text text-muted">Kindly ensure that it is a current
                             email.</small>
                     </div>
-                </div>
-
-                <div class="row">
                     <div class="col-md form-group">
                         <input type="tel" class="form-control" id="mediaHousePhone" name="mediaHousePhone" placeholder="Phone Number For The Media House"
                             required>
@@ -84,7 +86,7 @@
                 </div>
             <div class="row">
                 <div class="col-md form-group">
-                    <input type="text" class="form-control" id="contactPersonName" name="contactPersonName" placeholder=" Name Of Contact"
+                    <input type="text" class="form-control" id="contactPersonName" name="contactPersonName" placeholder="Full Names Of Contact Person"
                         required>
                     <div class="invalid-feedback">
                         Please provide a Name.
@@ -95,7 +97,7 @@
                 </div>
 
                     <div class="col-md form-group">
-                        <input type="email" class="form-control" id="contactPersonEmail" name="contactPersonEmail" placeholder="Contact Email Address" required>
+                        <input type="email" class="form-control" id="contactPersonEmail" name="contactPersonEmail" placeholder="Contact Person's Email" required>
                         <div class="invalid-feedback">
                             Please provide a valid email address.
                         </div>
@@ -106,9 +108,8 @@
                             email.</small>
                     </div>
 
-                <div class="row">
                     <div class="col-md form-group">
-                        <input type="tel" class="form-control" id="contactPersonPhone" name="contactPersonPhone" placeholder="Contact phone Number" required>
+                        <input type="tel" class="form-control" id="contactPersonPhone" name="contactPersonPhone" placeholder="Contact Person's Phone Number" required>
                         <div class="invalid-feedback">
                             Please provide a valid phone number.
                         </div>
@@ -117,13 +118,12 @@
                         </div>
                     </div>
                 </div>
-                </div>
               <div class="row">
             <div class="col form-group">
-  <label for="reasonForVolunteering">Name of representative</label>
-        <textarea rows="3" class="form-control" id="representative" name="representative"
+  <label for="reasonForVolunteering">Full Names of representative</label>
+        <textarea rows="3" class="form-control" id="representatives" name="representatives"
             required></textarea>
-        <small class="text-primary">Not more than two.</small>
+        <small class="text-primary">Not more than two. Each should be typed on a new line.</small>
     </div>
 </div>
                 <div class="row">
