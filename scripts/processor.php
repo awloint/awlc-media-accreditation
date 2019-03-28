@@ -62,10 +62,10 @@ if ($db->userExists($mediaHouseEmail, "awlc2019_accreditation")) {
 }
 // Put the User into the Database
 if ($db->insertUser("awlc2019_accreditation", $details)) {
-    // $notify->viaEmail("info@awlo.org", "Afican Women In Leadership Organisation", $mediaHouseEmail, $mediaHouseName, "You have successfully completed the media accreditation process.Media representatives are expeted to arrive at the conference venue with proof of identification to be presented at he registration desk. Identification validates entry.Thank you for your cooperation");
-    // $notify->viaEmail("info@awlo.org", "A media house has been accredited", "info@awlo.org", "Admin", $emailBodyOrganisation, "New Media Accreditation.");
-    // $notify->viaSMS("AWLOInt", "Dear {$mediaHouseName}, Your media accreditation was successful, Kindly check youur email for more details.", $mediaHousePhone);
-    // $notify->viaSMS("AWLOInt", "A Media House has just been accredited for the AWLCRwanda2019. Kindly check your email for the details.", "08037594969,08022473972");
-    // $newsletter->insertIntoList("2334123", $emails);
+    $notify->viaEmail("info@awlo.org", "African Women In Leadership Organisation", $mediaHouseEmail, $mediaHouseName, $emailBody, "AWLCRwanda2019 Media Accreditation");
+    $notify->viaEmail("info@awlo.org", "A Media house has been accredited", "info@awlo.org", "Admin", $emailBodyOrganisation, "New Media Accreditation.");
+    $notify->viaSMS("AWLOInt", "Dear {$mediaHouseName}, Your media accreditation was successful, Kindly check your email for more details.", $mediaHousePhone);
+    $notify->viaSMS("AWLOInt", "A Media House has just been accredited for the AWLCRwanda2019. Kindly check your email for the details.", "08037594969,08022473972");
+    $newsletter->insertIntoList("2334123", $emails);
     echo json_encode("success");
 }

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 22, 2019 at 03:15 PM
+-- Generation Time: Mar 28, 2019 at 04:16 PM
 -- Server version: 5.7.25-0ubuntu0.18.04.2
--- PHP Version: 7.2.15-0ubuntu0.18.04.1
+-- PHP Version: 7.2.15-0ubuntu0.18.04.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `AWLCRwanda2019`
+-- Database: `test`
 --
 
 -- --------------------------------------------------------
@@ -31,11 +31,11 @@ CREATE TABLE `awlc2019_accreditation` (
   `mediaHouseName` text NOT NULL,
   `mediaHouseEmail` varchar(50) NOT NULL,
   `mediaHousePhone` varchar(15) NOT NULL,
-  `contactName` text NOT NULL,
-  `contactEmail` varchar(50) NOT NULL,
-  `contactPhone` varchar(15) NOT NULL,
+  `contactPersonName` text NOT NULL,
+  `contactPersonEmail` varchar(50) NOT NULL,
+  `contactPersonPhone` varchar(15) NOT NULL,
   `representatives` text NOT NULL,
-  `created_at` datetime NOT NULL
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `awlc2019_accreditation` (
 ALTER TABLE `awlc2019_accreditation`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `mediaHouseEmail` (`mediaHouseEmail`),
-  ADD UNIQUE KEY `contactEmail` (`contactEmail`);
+  ADD UNIQUE KEY `contactEmail` (`contactPersonEmail`);
 
 --
 -- AUTO_INCREMENT for dumped tables
