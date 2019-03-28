@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', e => {
                 })
                 .then(data => {
                     if (data === 'user_exists') {
-                        swal('Already Signed Up!', 'You have already signed up to volunteer.', 'warning')
+                        swal('Already Accredited!', 'Your Media House is already accredited.', 'warning')
                         setTimeout(() => {
                             window.location = 'https://awlo.org/awlc/inviteafriend'
                         }, 3000)
                     } else
                     if (data === 'success') {
-                        swal('Sign Up Successful', 'Your volunteer signup was submitted successfully!', 'success')
+                        swal('Accreditation Successful', 'Your accrediation was successful!', 'success')
                         setTimeout(function () {
                             window.location = 'https://awlo.org/awlc/inviteafriend'
                         }, 3000)
