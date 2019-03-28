@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', e => {
                     return response.json()
                 })
                 .then(data => {
+                    console.log(data)
                     if (data === 'user_exists') {
                         swal('Already Accredited!', 'Your Media House is already accredited.', 'warning')
                         setTimeout(() => {
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', e => {
                         }, 3000)
                     } else
                     if (data === 'success') {
-                        swal('Accreditation Successful', 'Your accrediation was successful!', 'success')
+                        swal('Accreditation Successful', 'Your accreditation was successful!', 'success')
                         setTimeout(function () {
                             window.location = 'https://awlo.org/awlc/inviteafriend'
                         }, 3000)
@@ -89,4 +90,3 @@ document.addEventListener('DOMContentLoaded', e => {
         }
     })
 })
-

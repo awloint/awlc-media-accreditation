@@ -53,7 +53,7 @@ class DB
      */
     public function userExists($email, $tablename)
     {
-        $usercheck = "SELECT * FROM $tablename WHERE email=?";
+        $usercheck = "SELECT * FROM $tablename WHERE mediaHouseEmail=?";
         // prepare the Query
         $usercheckquery = $this->_conn->prepare($usercheck);
         //Execute the Query

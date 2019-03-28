@@ -73,7 +73,7 @@ $emailBodyOrganisation = "<table style='background-color: #d5d5d5;' border='0' w
 <strong>Name Of Contact: </strong> {$contactPersonName} <br>
 <strong>Contact Email Address: </strong> {$contactPersonEmail} <br>
 <strong>Contact Phone Number: </strong> {$contactPersonPhone} <br>
-<strong>Name Of representative: </strong> {$representative} <br>
+<strong>Names Of representative: </strong> {$representatives} <br>
 </p>
 <p>Warm Regards,</p>
 <p><img src='https://stbensonimoh.com/email/sign_rosette_blue_ink.png' height='50px' /></p>
